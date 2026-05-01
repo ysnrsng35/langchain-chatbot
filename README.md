@@ -12,19 +12,19 @@
 - Python 3.12  
 - LangChain 0.2 系  
 - ChromaDB  
-- SentenceTransformer（all-MiniLM-L6-v2）  
-- Ollama（Qwen2.5:1.5b モデル）  
-- ローカル LLM による回答生成（OpenAI や Gemini の無料枠を使い切ったため）
+- FastEmbed 
+- Ollama（llama3.2:3b）  
+- BeautifulSoup4 / readability-lxml
 
 ---
 
 ## 2. プロジェクト構成
 
-rag-project/
+langchain-chatbot/
 
-├── rag.py
+├── main.py
 
-├── data/sample.txt
+├── data/urls.txt
 
 ├── chroma_db/
 
@@ -37,27 +37,21 @@ rag-project/
 
 ## 3. 動作手順
 
-### ① モデルの準備（Ollama）
-ollama pull qwen2.5:1.5b
+### ① セットアップ　
+仮想環境
+python -m venv venv
 ### ② Python ライブラリのインストール
 pip install -r requirements.txt
-### ③ RAG の実行
-python rag.py
-### ④ 質問を入力  
+### ③ 実行
+python main.py
+### ④ 質問  
 例：
-猫について教えて
----
+Spotifyのアカウントを削除する方法についての質問の5番目のポイントは何ですか？
 
-## 4. 回答例
---- 回答 ---
-
-猫について教えて:
-
-猫は独立したペットであり、自分だけの空間を楽しむことがよくあります。
 ---
 
 ## 5. スクリーンレコード
 
 /docs
 
-├── demo1.mp4
+├── demo.mp4
