@@ -39,12 +39,15 @@ langchain-chatbot/
 
 ### ① セットアップ　
 仮想環境
-python -m venv venv
+python -m venv venv 
+
 source venv/bin/activate
 (Windows)
-venv\Scripts\activate
+venv\Scripts\activate 
+
 ライブラリのインストール
-pip install -r requirements.txt
+pip install -r requirements.txt 
+
 Ollamaモデル
 ollama pull llama3.2:3b
 ### ② 実行
