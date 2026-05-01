@@ -1,58 +1,62 @@
-RAG System with LangChain × Chroma × Ollama
-DigitalTrends 記事を対象にしたローカル RAG（検索拡張生成）システム
+# RAG（Retrieval-Augmented Generation）プロジェクト
 
-概要
-このプロジェクトは、
-LangChain v0.2 / Chroma / FastEmbed / Ollama（llama3.2:3b） を使用して構築した
-ローカル実行型の RAG（検索拡張生成）システムです。
+このプロジェクトは、LangChain・Chroma・Ollama を使用して  
+ローカル環境で動作する RAG（検索拡張生成）システムです。  
+（※Ollama が Colab 上で動作しないため、ローカルで実行しています）
 
-DigitalTrends の複数記事を自動取得し、
-本文抽出 → チャンク化 → ベクトル化 → 検索 → 回答生成
-までを一括で行います。
+---
 
-外部 API を使用しないため、完全ローカルで動作します。
+## 1. 使用技術
 
-使用技術
-Python 3.12
+- Python 3.12  
+- LangChain 0.2 系  
+- ChromaDB  
+- SentenceTransformer（all-MiniLM-L6-v2）  
+- Ollama（Qwen2.5:1.5b モデル）  
+- ローカル LLM による回答生成（OpenAI や Gemini の無料枠を使い切ったため）
 
-LangChain 0.2 系
+---
 
-ChromaDB
+## 2. プロジェクト構成
 
-FastEmbed（ローカル埋め込みモデル）
+rag-project/
 
-Ollama（llama3.2:3b）
+├── rag.py
 
-BeautifulSoup4 + readability-lxml（記事本文抽出）
+├── data/sample.txt
 
-プロジェクト構成
-コード
-rag-digitaltrends/
-├── main.py
-├── requirements.txt
+├── chroma_db/
+
 ├── README.md
-├── data/
-│   └── urls.txt
-└── chroma_db/   （自動生成・Git管理外）
-セットアップ
-1. 仮想環境の作成
-コード
-python -m venv venv
-コード
-source venv/bin/activate
-（Windows の場合）
 
-コード
-venv\Scripts\activate
-2. ライブラリのインストール
-コード
+└── requirements.txt
+
+
+---
+
+## 3. 動作手順
+
+### ① モデルの準備（Ollama）
+ollama pull qwen2.5:1.5b
+### ② Python ライブラリのインストール
 pip install -r requirements.txt
-3. Ollama モデルの準備
-コード
-ollama pull llama3.2:3b
-実行方法
-コード
-python main.py
-質問例
-コード
-Spotifyのアカウントを削除する方法についての質問の5番目のポイントは何ですか？
+### ③ RAG の実行
+python rag.py
+### ④ 質問を入力  
+例：
+猫について教えて
+---
+
+## 4. 回答例
+--- 回答 ---
+
+猫について教えて:
+
+猫は独立したペットであり、自分だけの空間を楽しむことがよくあります。
+---
+
+## 5. スクリーンレコード
+
+/docs
+
+├── demo1.mp4
