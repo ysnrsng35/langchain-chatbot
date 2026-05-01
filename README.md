@@ -46,11 +46,12 @@ source venv/bin/activate
 (Windows)  
 venv\Scripts\activate 
 
-ライブラリのインストール
+ライブラリのインストール  
 pip install -r requirements.txt 
 
-Ollamaモデル
+Ollamaモデル  
 ollama pull llama3.2:3b
+
 ### ② 実行
 python main.py
 ### ③ 質問  
