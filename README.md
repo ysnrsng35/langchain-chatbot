@@ -38,6 +38,7 @@ langchain-chatbot/
 ## 3. 動作手順
 
 ### ① セットアップ　
+
 仮想環境
 python -m venv venv 
 
