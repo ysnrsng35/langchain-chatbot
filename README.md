@@ -40,11 +40,16 @@ langchain-chatbot/
 ### ① セットアップ　
 仮想環境
 python -m venv venv
-### ② Python ライブラリのインストール
+source venv/bin/activate
+(Windows)
+venv\Scripts\activate
+ライブラリのインストール
 pip install -r requirements.txt
-### ③ 実行
+Ollamaモデル
+ollama pull llama3.2:3b
+### ② 実行
 python main.py
-### ④ 質問  
+### ③ 質問  
 例：
 Spotifyのアカウントを削除する方法についての質問の5番目のポイントは何ですか？
 
