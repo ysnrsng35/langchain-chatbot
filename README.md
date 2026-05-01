@@ -41,8 +41,8 @@ langchain-chatbot/
 
 仮想環境  
 python -m venv venv 
+source venv/bin/activate  
 
-source venv/bin/activate
 (Windows)
 venv\Scripts\activate 
 
