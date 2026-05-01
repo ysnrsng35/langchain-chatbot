@@ -1,8 +1,9 @@
-# RAG（Retrieval-Augmented Generation）プロジェクト
+# チャットボットプロジェクト
 
-このプロジェクトは、LangChain・Chroma・Ollama を使用して  
-ローカル環境で動作する RAG（検索拡張生成）システムです。  
-（※Ollama が Colab 上で動作しないため、ローカルで実行しています）
+このプロジェクトは、LangChain・Chroma・FastEmbed・Ollama を使用して  
+構築したローカル環境で動作する チャットボットシステムです。  
+（※Ollama が Colab 上で動作しないため、ローカルで実行しています。　
+　　またACTIVELOOPのトークンが有効にならなかったためChroma＋FastEmbedを使用しています）
 
 ---
 
