@@ -40,7 +40,7 @@ langchain-chatbot/
 ### ① セットアップ　
 
 仮想環境  
-python -m venv venv 
+python -m venv venv  
 source venv/bin/activate  
 
 (Windows)
